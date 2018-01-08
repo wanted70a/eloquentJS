@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+   </head>
+   <body>
+      <script type="text/javascript">
+        var size = 8;
+        for(i=0; i<size; i++){
+            if(i%2==0){
+                var pattern=[];
+                for(n=0; n<size; n++){
+                    if(n%2==0){
+                        pattern.push(' ');
+                    }else{
+                        pattern.push('#');
+                    }
+                }
+                console.log(pattern.join(''));
+            }else{
+                var pattern=[];
+                for(n=0; n<size; n++){
+                    if(n%2==0){
+                        pattern.push('#');
+                    }else{
+                        pattern.push(' ');
+                    }
+                }
+                console.log(pattern.join(''));
+            }
+        }
+
+
+      </script>
+   </body>
+</html>
