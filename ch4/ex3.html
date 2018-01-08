@@ -6,14 +6,19 @@
    </head>
    <body>
       <script type="text/javascript">
-        function countChar(string, character){
-            var count = 0;
-            for(var i=0; i<string.length; i++){
-                if(string.charAt(i) === character){
-                    count++
-                }
+        var a = [1,2,3];
+
+        function ll(arr){
+            if(arr.length == 0){
+                return null;
             }
-            return count;
+
+            var x = {
+                val:arr[ arr.length - 1 ],
+                next:ll( arr.splice(0,arr.length-1) ),
+            };
+
+            return x;
         }
       </script>
    </body>
