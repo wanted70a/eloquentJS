@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+   </head>
+   <body>
+      <script type="text/javascript">
+        function range(a,b, step){
+            if (step === undefined) {
+                 step = 1;
+            }
+
+            var arr =[];
+
+            for(var i = a; i<=b; i+=step){
+                if(i <= a){
+                    arr.push(a);
+                }else{
+                    if(step > 0){
+                        arr.push(arr[arr.length-1]+ step);
+                    }else{
+                        arr.push(arr[arr.length-1]- step);
+                    }
+
+                }
+            }
+
+            return arr;
+        }
+
+        function sum(arr){
+            var res = 0;
+            for(var i = 0; i<arr.length; i++){
+                res+= arr[i];
+            }
+
+            return res;
+        }
+      </script>
+   </body>
+</html>

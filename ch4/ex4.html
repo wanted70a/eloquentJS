@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+   </head>
+   <body>
+      <script type="text/javascript">
+        function countProps(obj1, obj2){
+            var countA = 0;
+            var countB = 0;
+
+            for(p in obj1){
+                countA++;
+            }
+
+            for(p in obj2){
+                countB++;
+            }
+
+            if(countA === countB){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        function CheckPropNames(obj1, obj2){
+            for(p in obj1){
+                if( !obj2.hasOwnProperty(p) ){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function compareProps(obj1, obj2){
+            for(p in obj1){
+                if(obj1[p] != obj2[p]){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function deep(arg1, arg2){
+            if(typeof arg1 !== 'object' && typeof arg2 !== 'object'){
+                //if not object
+                if ( arg1 === arg2 ){
+                    return true;
+                }else{
+                    return false;
+                }
+            }else{
+                if(countProps(arg1, arg2) && CheckPropNames(arg1, arg2) && compareProps(arg1, arg2)){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+        }
+      </script>
+   </body>
+</html>
