@@ -5,79 +5,9 @@
       <title></title>
    </head>
    <body>
+       <a href="https://repl.it/@wanted70a/ELoquent-CH5-ex-3">Link to EX 4</a>
       <script type="text/javascript">
-        var a = [1,2,3];
 
-        function ll(arr){
-            if(arr.length == 0){
-                return null;
-            }
-
-            var x = {
-                val:arr[ arr.length - 1 ],
-                next:ll( arr.splice(0,arr.length-1) ),
-            };
-
-            return x;
-        };
-
-        function arrToList(arr){
-            var o = {};
-
-            for(x=arr.length-1; x>=0; x--){
-                if( x===arr.length-1 ){
-                    o={
-                        val:arr[x],
-                        next:null,
-                    }
-                }else{
-                    o={
-                        val:arr[x],
-                        next:o,
-                    }
-                }
-            }
-
-            return o;
-        }
-
-        function listToArr(list){
-            var arr=[];
-
-            for(var node = list; node; node = node.next){
-                console.log(count)
-                arr.push(node.val);
-            }
-            return arr;
-        }
-
-        function prepend(value, list){
-            return {value:value, next:list};
-        }
-
-        function nth(list, num){
-            var arr=[];
-            var count=0;
-            for(var node = list; node; node = node.next){
-                if(count === num-1){
-                    return node.val;
-                }
-                count++;
-            }
-        }
-
-        function stef(list,prop){
-
-            for(prop in list){
-                if(list.next === null){
-                    return false;
-                }else{
-                    console.log(list.val);
-                    list = list.next;
-                    stef(list,prop);
-                }
-            }
-        }
       </script>
    </body>
 </html>

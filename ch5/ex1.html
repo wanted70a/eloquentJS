@@ -6,37 +6,10 @@
    </head>
    <body>
       <script type="text/javascript">
-        function range(a,b, step){
-            if (step === undefined) {
-                 step = 1;
-            }
-
-            var arr =[];
-
-            for(var i = a; i<=b; i+=step){
-                if(i <= a){
-                    arr.push(a);
-                }else{
-                    if(step > 0){
-                        arr.push(arr[arr.length-1]+ step);
-                    }else{
-                        arr.push(arr[arr.length-1]- step);
-                    }
-
-                }
-            }
-
-            return arr;
-        }
-
-        function sum(arr){
-            var res = 0;
-            for(var i = 0; i<arr.length; i++){
-                res+= arr[i];
-            }
-
-            return res;
-        }
+        var arr = [[1, 2, 3], [4, 5], [6]];
+        var x = arr.reduce(function(acc, cur){
+            return acc.concat(cur);
+        });
       </script>
    </body>
 </html>
